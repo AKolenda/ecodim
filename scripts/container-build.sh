@@ -21,7 +21,8 @@ if [ ! -x "$SDK/cmdline-tools/latest/bin/sdkmanager" ]; then
     mv /tmp/cmdline-tools/cmdline-tools "$SDK/cmdline-tools/latest"
     rm -rf /tmp/cmdline-tools /tmp/cmdline-tools.zip
 fi
-yes | "$SDK/cmdline-tools/latest/bin/sdkmanager" --sdk_root="$SDK" --licenses >/dev/null
+# `yes` dies of SIGPIPE once sdkmanager stops reading, which pipefail would treat as failure.
+yes | "$SDK/cmdline-tools/latest/bin/sdkmanager" --sdk_root="$SDK" --licenses >/dev/null || true
 "$SDK/cmdline-tools/latest/bin/sdkmanager" --sdk_root="$SDK" "platforms;android-34" "build-tools;34.0.0" >/dev/null
 
 if [ -d /src/ecodim/.git ]; then
