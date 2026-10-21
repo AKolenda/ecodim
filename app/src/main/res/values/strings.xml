@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EcoDim</string>
+    <string name="tile_label">EcoDim</string>
+    <string name="service_summary">Dims the whole screen below the lowest brightness</string>
+    <string name="service_description">EcoDim draws a dark layer over the whole screen, including the status bar and notification shade. It does not read your screen, see what you type, or collect any data. Tip: turn on the EcoDim shortcut below, then hold both volume keys to switch dimming off from anywhere.</string>
+    <string name="channel_name">Dimming</string>
+</resources>
