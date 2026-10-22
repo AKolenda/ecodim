@@ -33,3 +33,10 @@ Release APKs are built in a clean container with `scripts/container-build.sh`.
 
 Signed release: pass `-PECODIMMER_STORE_FILE`, `-PECODIMMER_STORE_PASSWORD`,
 `-PECODIMMER_KEY_ALIAS` and `-PECODIMMER_KEY_PASSWORD` to `./gradlew assembleRelease`.
+
+## License
+Copyright (C) 2026 AKolenda
+
+EcoDim is free software: you can redistribute it and/or modify it under the terms of the
+GNU Affero General Public License as published by the Free Software Foundation, version 3 or
+(at your option) any later version. See [LICENSE](LICENSE).
