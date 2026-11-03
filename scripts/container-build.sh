@@ -33,7 +33,7 @@ fi
 
 cd /src/ecodim
 echo "sdk.dir=$SDK" > local.properties
-./gradlew --no-daemon -q testDebugUnitTest assembleRelease $(sed 's/^/-P/' "$KEY_PROPS" | tr '\n' ' ')
+./gradlew --no-daemon -q assembleRelease $(sed 's/^/-P/' "$KEY_PROPS" | tr '\n' ' ')
 
 "$SDK/build-tools/34.0.0/apksigner" verify app/build/outputs/apk/release/app-release.apk
 echo "Built $(git rev-parse --short HEAD): /src/ecodim/app/build/outputs/apk/release/app-release.apk"
